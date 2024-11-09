@@ -1,4 +1,4 @@
-import {eta} from "@cedx/koa-eta";
+import {pug} from "@cedx/koa-pug";
 import Koa from "koa";
 import console from "node:console";
 import {join} from "node:path";
@@ -8,7 +8,7 @@ import pkg from "../package.json" with {type: "json"};
 const app = new Koa;
 
 // Configure the view renderer.
-eta(app, {
+pug(app, {
 	basedir: join(import.meta.dirname, "../res"),
 	cache: app.env == "production",
 	compileDebug: app.env != "production"
