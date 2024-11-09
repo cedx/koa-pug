@@ -40,11 +40,6 @@ declare module "koa" {
 export type RenderingOptions = Partial<{
 
 	/**
-	 * Value indicating whether the template is asynchronous.
-	 */
-	async: boolean;
-
-	/**
 	 * Value indicating whether to write the rendering result to the response.
 	 */
 	writeResponse: boolean;
