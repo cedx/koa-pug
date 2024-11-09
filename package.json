@@ -37,6 +37,7 @@
 	"keywords": [
 		"koa",
 		"middleware",
+		"pdf",
 		"pug",
 		"render",
 		"template",
