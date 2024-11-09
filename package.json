@@ -1,0 +1,51 @@
+{
+	"bugs": "https://github.com/cedx/koa-pug/issues",
+	"description": "A Koa view renderer based on the Pug template engine.",
+	"homepage": "https://github.com/cedx/koa-pug",
+	"license": "MIT",
+	"name": "@cedx/koa-pug",
+	"repository": "cedx/koa-pug",
+	"type": "module",
+	"version": "1.0.0",
+	"author": {
+		"email": "cedric@belin.io",
+		"name": "Cédric Belin",
+		"url": "https://belin.io"
+	},
+	"dependencies": {
+		"pug": "^3.0.3",
+		"puppeteer": "^23.7.1"
+	},
+	"devDependencies": {
+		"@coffeelint/cli": "^5.2.11",
+		"@types/node": "^22.9.0",
+		"@types/pug": "^2.0.10",
+		"coffeescript": "^2.7.0"
+	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"exports": {
+		"types": "./lib/index.d.ts",
+		"default": "./lib/index.js"
+	},
+	"files": [
+		"lib/",
+		"src/"
+	],
+	"keywords": [
+		"koa",
+		"middleware",
+		"pug",
+		"render",
+		"template",
+		"view"
+	],
+	"peerDependencies": {
+		"koa": ">=2.15.0"
+	},
+	"scripts": {
+		"start": "node example/server.js",
+		"test": "cake test"
+	}
+}
