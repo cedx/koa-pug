@@ -11,7 +11,7 @@ export pug = (application, rendererOptions = {}) ->
 		if isAbsolute(view) or not rendererOptions.basedir? then view else join rendererOptions.basedir, view
 
 	# Renders the specified view.
-	_render = (view, locals = {}, renderingOptions = {}) ->
+	render = (view, locals = {}, renderingOptions = {}) ->
 		data = {rendererOptions..., @state..., locals...}
 		html = await Promise.resolve renderer.renderFile resolvePath(view), data
 		if renderingOptions.writeResponse ? yes
@@ -20,7 +20,7 @@ export pug = (application, rendererOptions = {}) ->
 		html
 
 	# Renders the specified view as a PDF document.
-	_renderPdf = (view, locals = {}, renderingOptions = {}) ->
+	renderPdf = (view, locals = {}, renderingOptions = {}) ->
 		data = {rendererOptions..., @state..., locals...}
 		html = await Promise.resolve renderer.renderFile resolvePath(view), data
 		pdf = await htmlToPdf html, browser: rendererOptions.browser, pdf: renderingOptions
@@ -30,5 +30,5 @@ export pug = (application, rendererOptions = {}) ->
 		pdf
 
 	# Attach the rendering functions to the application context.
-	Object.defineProperties application.context, render: {value: _render}, renderPdf: {value: _renderPdf}
+	Object.defineProperties application.context, render: {value: render}, renderPdf: {value: renderPdf}
 	renderer
