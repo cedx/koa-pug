@@ -1,10 +1,9 @@
 import {extname, isAbsolute, join} from "node:path"
-import {compile, compileFile, render, renderFile} from "pug"
+import renderer from "pug"
 import {htmlToPdf} from "./puppeteer.js"
 
 # Attaches a view renderer to the context of the specified application.
 export pug = (application, rendererOptions = {}) ->
-	renderer = Object.freeze {compile, compileFile, render, renderFile}
 
 	# Resolves the path of the specified view.
 	resolvePath = (view) ->
