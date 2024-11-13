@@ -50,6 +50,6 @@
 	},
 	"scripts": {
 		"start": "node example/server.js",
-		"test": "cake test"
+		"test": "gulp test"
 	}
 }
