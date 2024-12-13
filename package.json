@@ -14,12 +14,12 @@
 	},
 	"dependencies": {
 		"pug": "^3.0.3",
-		"puppeteer": "^23.10.2"
+		"puppeteer": "^23.10.4"
 	},
 	"devDependencies": {
 		"@coffeelint/cli": "^5.2.11",
 		"@types/koa": "^2.15.0",
-		"@types/node": "^22.10.1",
+		"@types/node": "^22.10.2",
 		"@types/pug": "^2.0.10",
 		"coffeescript": "^2.7.0"
 	},
