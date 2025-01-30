@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import globals from "globals";
 import {join} from "node:path";
 import ts from "typescript-eslint";
 
@@ -8,6 +9,7 @@ export default ts.config(
 	...ts.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
+			globals: {...globals.nodeBuiltin},
 			parserOptions: {
 				project: "tsconfig.json",
 				tsconfigRootDir: join(import.meta.dirname, "..")
@@ -88,7 +90,7 @@ export default ts.config(
 			"no-octal-escape": "error",
 			"no-param-reassign": "off",
 			"no-plusplus": "off",
-			"no-promise-executor-return": "error",
+			"no-promise-executor-return": ["error", {allowVoid: true}],
 			"no-proto": "error",
 			"no-restricted-exports": "error",
 			"no-restricted-globals": "error",
