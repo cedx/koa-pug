@@ -90,7 +90,7 @@ export default ts.config(
 			"no-octal-escape": "error",
 			"no-param-reassign": "off",
 			"no-plusplus": "off",
-			"no-promise-executor-return": ["error", {allowVoid: true}],
+			"no-promise-executor-return": "error",
 			"no-proto": "error",
 			"no-restricted-exports": "error",
 			"no-restricted-globals": "error",

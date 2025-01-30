@@ -1,8 +1,5 @@
-import {Buffer} from "node:buffer";
-import {PDFOptions} from "puppeteer";
-
-export * from "./pug.js";
-export * from "./puppeteer.js";
+import type {PdfOptions} from "./playwright.ts";
+import type {RenderingOptions} from "./pug.ts";
 
 /**
  * Declaration merging.
@@ -12,7 +9,7 @@ declare module "koa" {
 	/**
 	 * The request context.
 	 */
-	interface ExtendableContext {
+	interface ExtendableContext { // eslint-disable-line @typescript-eslint/consistent-type-definitions
 
 		/**
 		 * Renders the specified view.
@@ -21,7 +18,7 @@ declare module "koa" {
 		 * @param options The rendering options.
 		 * @returns The rendering result.
 		 */
-		render(view: string, locals?: object, options?: RenderingOptions): Promise<string>;
+		render: (view: string, locals?: object, options?: RenderingOptions) => Promise<string>;
 
 		/**
 		 * Renders the specified view as a PDF document.
@@ -30,17 +27,6 @@ declare module "koa" {
 		 * @param options The rendering options.
 		 * @returns The rendering result.
 		 */
-		renderPdf(view: string, locals?: object, options?: PDFOptions & RenderingOptions): Promise<Buffer>;
+		renderPdf: (view: string, locals?: object, options?: PdfOptions & RenderingOptions) => Promise<Buffer>;
 	}
 }
-
-/**
- * Defines the rendering options.
- */
-export type RenderingOptions = Partial<{
-
-	/**
-	 * Value indicating whether to write the rendering result to the response.
-	 */
-	writeResponse: boolean;
-}>;
