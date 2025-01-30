@@ -5,6 +5,7 @@ A [Koa](https://koajs.com) view renderer based on the [Pug](https://pugjs.org) t
 
 ## Documentation
 - [User guide](https://github.com/cedx/koa-pug/wiki)
+- [API reference](https://cedx.github.io/koa-pug)
 - [Examples](https://github.com/cedx/koa-pug/tree/main/example)
 
 ## Development

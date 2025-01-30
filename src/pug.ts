@@ -7,7 +7,7 @@ import {htmlToPdf, type PdfOptions} from "./playwright.js";
 /**
  * Attaches a view renderer to the context of the specified application.
  * @param application The application instance.
- * @param options The renderer options.
+ * @param rendererOptions The renderer options.
  * @returns The newly created view renderer.
  */
 export function pug(application: Koa, rendererOptions: RendererOptions = {}): typeof Pug {
