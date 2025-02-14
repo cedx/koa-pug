@@ -12,6 +12,7 @@
 *.mjs text
 *.ps1 text
 *.pug text
+*.slnx text
 *.sql text
 *.svg text
 *.ts text
