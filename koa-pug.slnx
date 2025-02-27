@@ -1,6 +1,0 @@
-<Solution>
-	<Project Path="koa-pug.esproj">
-		<Build />
-		<Deploy />
-	</Project>
-</Solution>
