@@ -2,7 +2,7 @@ import type {Context, default as Koa} from "koa";
 import {extname, isAbsolute, join} from "node:path";
 import type {LaunchOptions} from "playwright-core";
 import Pug from "pug";
-import {htmlToPdf, type PdfOptions} from "./playwright.js";
+import {htmlToPdf, type PdfOptions} from "./Playwright.js";
 
 /**
  * Attaches a view renderer to the context of the specified application.

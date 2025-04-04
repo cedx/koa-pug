@@ -1,5 +1,5 @@
-import type {PdfOptions} from "./playwright.ts";
-import type {RenderingOptions} from "./pug.ts";
+import type {PdfOptions} from "./Playwright.ts";
+import type {RenderingOptions} from "./Pug.ts";
 
 /**
  * Declaration merging.
