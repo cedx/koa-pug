@@ -54,8 +54,6 @@
 		"access": "public"
 	},
 	"scripts": {
-		"build": "gulp build",
-		"clean": "gulp clean",
 		"test": "gulp test"
 	}
 }
