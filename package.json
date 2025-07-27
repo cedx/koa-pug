@@ -7,7 +7,7 @@
 	"name": "@cedx/koa-pug",
 	"repository": "cedx/koa-pug",
 	"type": "module",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"dependencies": {
 		"@playwright/browser-chromium": "^1.54.1",
 		"playwright": "^1.54.1",
