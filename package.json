@@ -9,13 +9,13 @@
 	"type": "module",
 	"version": "3.0.0",
 	"dependencies": {
-		"@playwright/browser-chromium": "^1.56.0",
-		"playwright": "^1.56.0",
+		"@playwright/browser-chromium": "^1.56.1",
+		"playwright": "^1.56.1",
 		"pug": "^3.0.3"
 	},
 	"devDependencies": {
 		"@types/koa": "^3.0.0",
-		"@types/node": "^24.7.2",
+		"@types/node": "^24.8.1",
 		"@types/pug": "^2.0.10",
 		"globals": "^16.4.0",
 		"typedoc": "^0.28.14",
