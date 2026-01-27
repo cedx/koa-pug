@@ -1,0 +1,6 @@
+<Solution>
+	<Project Path="KoaPug.esproj">
+		<Build />
+		<Deploy />
+	</Project>
+</Solution>
