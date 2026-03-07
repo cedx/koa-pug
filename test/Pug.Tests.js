@@ -30,7 +30,7 @@ describe("pug()", () => {
 			equal(response.status, 200);
 
 			const body = await response.text();
-			ok(body.startsWith("<!doctype html>"));
+			ok(body.startsWith("<!DOCTYPE html>"));
 			ok(body.includes("<title>Pug for Koa</title>"));
 			ok(body.includes(`<b>${pkg.version}</b>`));
 			ok(body.trimEnd().endsWith("</html>"))

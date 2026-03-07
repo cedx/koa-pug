@@ -30,16 +30,16 @@ export function pug(application: Koa, rendererOptions: RendererOptions = {}): ty
 	 * @param renderingOptions The rendering options.
 	 * @returns The rendering result.
 	 */
-	async function render(this: Context, view: string, locals: object = {}, renderingOptions: RenderingOptions = {}): Promise<string> {
+	function render(this: Context, view: string, locals: object = {}, renderingOptions: RenderingOptions = {}): Promise<string> {
 		const data = {...rendererOptions, ...this.state, ...locals};
-		const html = await Promise.resolve(renderer.renderFile(resolvePath(view), data));
+		const html = renderer.renderFile(resolvePath(view), data);
 
 		if (renderingOptions.writeResponse ?? true) {
 			this.body = html;
 			this.type = "html";
 		}
 
-		return html;
+		return Promise.resolve(html);
 	}
 
 	/**
@@ -51,7 +51,7 @@ export function pug(application: Koa, rendererOptions: RendererOptions = {}): ty
 	 */
 	async function renderPdf(this: Context, view: string, locals: object = {}, renderingOptions: PdfOptions & RenderingOptions = {}): Promise<Buffer> {
 		const data = {...rendererOptions, ...this.state, ...locals};
-		const html = await Promise.resolve(renderer.renderFile(resolvePath(view), data));
+		const html = renderer.renderFile(resolvePath(view), data);
 
 		const pdf = await htmlToPdf(html, {browser: rendererOptions.browser, pdf: renderingOptions});
 		if (renderingOptions.writeResponse ?? true) {
