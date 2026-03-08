@@ -2,8 +2,7 @@
 A [Koa](https://koajs.com) view renderer based on the [Pug](https://pugjs.org) template engine.
 
 ## Documentation
-- [User guide](https://github.com/cedx/koa-pug/wiki)
-- [API reference](https://cedx.github.io/koa-pug)
+- [User guide](https://github.com/cedx/koa-pug/tree/main/docs)
 - [Examples](https://github.com/cedx/koa-pug/tree/main/example)
 
 ## Development
