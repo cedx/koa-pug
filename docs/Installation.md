@@ -20,12 +20,12 @@ npm --version
 From a command prompt, run:
 
 ```shell
-npm install @cedx/koa-pug
+npm install @cedx/KoaPug
 ```
 
 ### 2. Import it
 Now in your [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) code, you can use:
 
 ```js
-import {pug} from "@cedx/koa-pug";
+import {pug} from "@cedx/KoaPug";
 ```

@@ -1,4 +1,4 @@
-import {pug} from "@cedx/koa-pug";
+import {pug} from "@cedx/KoaPug";
 import Koa from "koa";
 import console from "node:console";
 import {join} from "node:path";

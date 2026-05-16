@@ -1,11 +1,11 @@
 {
 	"author": "Cédric Belin <cedx@outlook.com>",
-	"bugs": "https://github.com/cedx/koa-pug/issues",
+	"bugs": "https://github.com/CedX/KoaPug/issues",
 	"description": "A Koa view renderer based on the Pug template engine.",
-	"homepage": "https://github.com/cedx/koa-pug",
+	"homepage": "https://github.com/CedX/KoaPug",
 	"license": "MIT",
 	"name": "@cedx/koa-pug",
-	"repository": "cedx/koa-pug",
+	"repository": "CedX/KoaPug",
 	"type": "module",
 	"version": "3.0.0",
 	"dependencies": {
